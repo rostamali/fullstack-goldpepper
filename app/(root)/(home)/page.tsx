@@ -8,6 +8,7 @@ import {
 	HomeContactInfo,
 } from '@/constants/content';
 import ContactForm from '@/components/forms/contact-form';
+import { ChevronRight } from 'lucide-react';
 export const metadata = {
 	title: 'Unlock Your Financial Potential | Leading Investment Porta',
 	description:
@@ -26,7 +27,9 @@ export default function Home() {
 				<div className="container flex-center h-full text-center">
 					<div className="flex flex-col items-center gap-[30px] md:w-[60%] w-full">
 						<h1 className="heading-1 text-primary-white text-center">
-							The Genesis of Gold & Pepper
+							The Genesis of
+							<br />
+							Gold & Pepper
 						</h1>
 						<p className="text-base-1 text-gray-light text-center">
 							Situated at the strategic nexus between the Middle
@@ -52,89 +55,81 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section
-				id="about-us"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
+			<section className="bg-primary-gray md:py-[80px] py-[60px] space-y-28">
+				{/* Short info */}
 				<div className="container">
-					<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
-						<div className="flex flex-col gap-[20px]">
-							<span className="text-base-2 text-gray-muted">
-								Invest
-							</span>
-							<h2 className="heading-2 text-primary-white">
-								Unlock Your Financial Potential with Our
-								Investment Platform
-							</h2>
-						</div>
-						<div className="flex flex-col gap-[20px] items-start">
-							<p className="text-base-2 text-gray-light">
-								We are a leading investment portal, providing
-								individuals with the tools and knowledge to make
-								informed investment decisions. With our
-								user-friendly platform and expert guidance, you
-								can confidently navigate the world of investing
-								and achieve your financial goals.
-							</p>
-							<div className="flex items-center gap-[15px]">
-								<Link href="/who-we-are">
-									<Button className="btn-primary-sm">
-										Learn more
-									</Button>
-								</Link>
-								<Link href="/auth/signup">
-									<Button className="btn-ghost-sm text-gray-muted">
-										Sign up
-									</Button>
-								</Link>
-							</div>
-						</div>
+					<div className="space-y-2">
+						<h2 className="heading-2 text-primary-white">
+							Discover the Power of Our Investment Platform
+						</h2>
+						<p className="text-base-1 text-gray-light">
+							Situated at the strategic nexus between the Middle
+							Eastern and European markets, Gold & Pepper was
+							conceived to address the nuanced demands of the
+							hospitality sector. Our foundation is anchored in
+							the principles of professional integrity, precise
+							market insight, and unwavering commitment to client
+							success.
+						</p>
 					</div>
-				</div>
-			</section>
-			<section
-				id="feature-list"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
-				<div className="container">
-					<div className="feature-header">
-						<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
-							<div className="flex flex-col gap-[20px]">
-								<h2 className="heading-2 text-primary-white">
-									Discover the Power of Our Investment
-									Platform
-								</h2>
-							</div>
-							<div className="flex flex-col gap-[20px] items-start">
-								<p className="text-base-2 text-gray-light">
-									With our user-friendly interface, you can
-									easily track your investments, analyze
-									performance, and access real-time market
-									data. Take control of your financial future
-									today.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className="feature-items mt-[60px]">
-						<div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
-							{FeatureList.map((feature, index) => (
-								<ServiceCard
-									key={index}
-									data={feature}
-									link={true}
-								/>
+					<div className="about-features mt-[40px]">
+						<div className="grid md:grid-cols-2 grid-cols-1 gap-[40px]">
+							{[1, 2].map((item, index) => (
+								<div key={index} className="space-y-3">
+									<h4 className="heading-4 text-white border-l-[4px] border-primary-gold leading-[1em] pl-2">
+										Vision & Mission
+									</h4>
+									<p className="text-base-1 text-gray-light">
+										Gold & Pepper was founded with a
+										singular vision: To elevate the
+										standards of business consultancy by
+										offering unparalleled expertise tailored
+										to the unique challenge and
+										opportunities inherent in the
+										hospitality industry. Our mission is to
+										empower our clients with actionable
+										strategies, ensuring sustainable growth
+										and competitive advantage in an ever-
+										evolving global marketplace.
+									</p>
+								</div>
 							))}
 						</div>
 					</div>
 				</div>
-			</section>
-			<section
-				id="home-cta-banner"
-				className="py-[100px] bg-cover md:bg-center bg-right"
-			>
+
+				{/* Features */}
 				<div className="container">
-					<div className="banner-header">
+					<div className="feature-items mt-[60px]">
+						{FeatureList.map((item, index) => (
+							<Link
+								key={index}
+								href={item.url}
+								className="border-t last:border-b border-gray-50 flex items-center justify-between py-4 duration-150 hover:bg-gray-light hover:bg-opacity-30"
+							>
+								<div className="space-y-1.5 flex-1">
+									<h5 className="heading-5 text-white">
+										{item.name}
+									</h5>
+									<p className="text-base-1 text-gray-light">
+										{item.description}
+									</p>
+								</div>
+								<ChevronRight
+									size={50}
+									className="text-gray-muted max-sm:hidden"
+								/>
+							</Link>
+						))}
+					</div>
+				</div>
+
+				{/* CTA banner */}
+				<div className="container">
+					<div
+						className="p-10 rounded-md bg-cover"
+						id="home-cta-banner"
+					>
 						<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
 							<div className="flex flex-col gap-[20px]">
 								<span className="text-base-2 text-primary-white">
@@ -169,28 +164,29 @@ export default function Home() {
 								</div>
 							</div>
 						</div>
-					</div>
-					<div className="cta-banner-logos mt-[80px]">
-						<div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-[20px] items-center">
-							{[1, 2, 3, 4, 5].map((item, index) => (
-								<Image
-									src={`/assets/client-logo/1000${item}.png`}
-									alt={'Client logo'}
-									width={113}
-									height={80}
-									key={index}
-									className="object-contain w-auto h-[60px]"
-								/>
-							))}
+
+						<div className="cta-banner-logos mt-[60px]">
+							<div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-[20px] items-center">
+								{[1, 2, 3, 4, 5].map((item, index) => (
+									<Image
+										src={`/assets/client-logo/1000${item}.png`}
+										alt={'Client logo'}
+										width={113}
+										height={80}
+										key={index}
+										className="object-contain w-auto h-[60px]"
+									/>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section className="md:py-[80px] py-[60px] bg-primary-gray">
+
+				{/* Counter */}
 				<div className="container">
-					<div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
+					<div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-[25px]">
 						{CounterDetails.map((item, index) => (
-							<div className="space-y-3" key={index}>
+							<div className="space-y-3 text-center" key={index}>
 								<h1 className="heading-1 text-gray-light">
 									{item.counter}
 								</h1>
@@ -201,11 +197,8 @@ export default function Home() {
 						))}
 					</div>
 				</div>
-			</section>
-			<section
-				id="contact-details"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
+
+				{/* Contact Form */}
 				<div className="container">
 					<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px]">
 						<div>

@@ -153,10 +153,14 @@ export const CounterDetails = [
 	},
 	{
 		counter: '15',
-		label: 'Awards',
+		label: 'Ongoing Projects',
 	},
 	{
 		counter: '1.2k',
-		label: 'Star Rating',
+		label: 'Total Projects Value',
+	},
+	{
+		counter: '1.2k',
+		label: 'Market Presence',
 	},
 ];

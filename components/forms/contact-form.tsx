@@ -123,7 +123,10 @@ const ContactForm = () => {
 					)}
 				/>
 				<div className="auth-input__group">
-					<Button className="btn-primary-sm" disabled={isPending}>
+					<Button
+						className="btn-primary-sm w-full"
+						disabled={isPending}
+					>
 						{isPending ? 'Submitting' : 'Submit'}
 					</Button>
 				</div>
