@@ -196,3 +196,17 @@ export const ClientList = [
 		icon: 'logo-9.png',
 	},
 ];
+export const HomeWhatWeDo = [
+	{
+		title: `Strategic Consultancy`,
+		description: `Customized guidance to navigate market dynamics effectively.`,
+	},
+	{
+		title: `Investment Support`,
+		description: `Bridging your business with pivotal growth opportunities.`,
+	},
+	{
+		title: `Industry-Specific Expertise`,
+		description: `Our extensive knowledge covers various sectors, equipping us to support your unique ambitions comprehensively.`,
+	},
+];
