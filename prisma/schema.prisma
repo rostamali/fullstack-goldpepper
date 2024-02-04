@@ -1,0 +1,276 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Prisma models ENUM values
+enum AccountStatus {
+  INACTIVE
+  ACTIVE
+}
+
+enum Role {
+  USER
+  MANAGER
+  ADMIN
+}
+
+enum InvestmentStatus {
+  ACCEPT
+  NOT_ACCEPT
+  PENDING
+  CANCELED
+}
+
+enum DocumentStatus {
+  PUBLIC
+  PRIVATE
+}
+
+enum ProjectStatus {
+  ACTIVE
+  PRIVATE
+}
+
+enum SubscribeStatus {
+  SUBSCRIBE
+  UNSUBSCRIBE
+}
+
+// Start design user prisma models
+model User {
+  id                String        @id @unique @default(uuid())
+  firstName         String        @db.Char(50)
+  lastName          String?       @db.Char(50)
+  email             String        @unique
+  phoneNumber       String?
+  password          String
+  passwordChangedAt DateTime?
+  company           String?
+  bio               String?
+  avatar            Avatar?
+  projects          Project[]
+  investments       Investment[]
+  files             File[]
+  isVerified        Boolean       @default(false)
+  role              Role          @default(USER)
+  status            AccountStatus @default(INACTIVE)
+  lastLogin         DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+}
+
+model Form {
+  id          String   @id @unique @default(uuid())
+  name        String
+  email       String
+  message     String
+  acceptTerms Boolean
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Subscriber {
+  id        String          @id @unique @default(uuid())
+  email     String          @unique
+  status    SubscribeStatus @default(SUBSCRIBE)
+  isActive  Boolean         @default(true)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
+// Start design File/Avatar prisma models
+model Avatar {
+  id        String   @id @unique @default(uuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String   @unique
+  fileName  String
+  url       String
+  size      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model File {
+  id              String     @id @unique @default(uuid())
+  fileType        String
+  fileName        String     @unique
+  title           String
+  description     String?
+  url             String
+  size            String
+  gallery         Gallery?   @relation(fields: [galleryId], references: [id])
+  galleryId       String?
+  projects        Project[]
+  document        Document[]
+  isCompress      Boolean    @default(false)
+  compressPercent Float?
+  author          User       @relation(fields: [authorId], references: [id])
+  authorId        String
+  isActive        Boolean    @default(true)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model Gallery {
+  id        String   @id @unique @default(uuid())
+  files     File[]
+  project   Project? @relation(fields: [projectId], references: [id])
+  projectId String?  @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Document {
+  id          String         @id @unique @default(uuid())
+  name        String
+  description String?
+  file        File           @relation(fields: [fileId], references: [id])
+  fileId      String
+  project     Project        @relation(fields: [projectId], references: [id])
+  projectId   String
+  status      DocumentStatus @default(PRIVATE)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+// Start design Project prisma models
+model Project {
+  id          String        @id @unique @default(uuid())
+  name        String
+  slug        String        @unique
+  description Bytes?
+  thumbnail   File?         @relation(fields: [thumbnailId], references: [id])
+  thumbnailId String?
+  gallery     Gallery?
+  documents   Document[]
+  status      ProjectStatus @default(PRIVATE)
+
+  capex        Float
+  totalRevenue Float
+  totalCost    Float
+  roi          Float
+
+  investments Investment[]
+  author      User         @relation(fields: [authorId], references: [id])
+  authorId    String
+  closeDate   DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  assetsValue        AssetsValue[]
+  breakEven          BreakEven[]
+  dcfMethod          DcfMethod[]
+  distributionMethod DistributionMethod[]
+  ebitdaMethod       EbitdaMethod[]
+  performance        Performance[]
+  profitEquity       ProfitEquity[]
+}
+
+model Investment {
+  id        String           @id @unique @default(uuid())
+  status    InvestmentStatus @default(PENDING)
+  project   Project          @relation(fields: [projectId], references: [id])
+  projectId String
+
+  user        User    @relation(fields: [userId], references: [id])
+  userId      String
+  name        String
+  email       String
+  phoneNumber String?
+
+  agreeTerm Boolean  @default(true)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum BreakEvenType {
+  REVENUE
+  EXPENCES
+}
+
+model AssetsValue {
+  id    String   @id @unique @default(uuid())
+  date  DateTime
+  value Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model BreakEven {
+  id       String   @id @unique @default(uuid())
+  date     DateTime
+  revenue  Float
+  expences Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model DcfMethod {
+  id    String   @id @unique @default(uuid())
+  date  DateTime
+  value Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model DistributionMethod {
+  id    String @id @unique @default(uuid())
+  label String
+  value Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model EbitdaMethod {
+  id    String   @id @unique @default(uuid())
+  date  DateTime
+  value Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model Performance {
+  id    String   @id @unique @default(uuid())
+  date  DateTime
+  value Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}
+
+model ProfitEquity {
+  id     String   @id @unique @default(uuid())
+  date   DateTime
+  profit Float
+  equity Float
+
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String?
+
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button,
+.otp-input-field {
+	-webkit-appearance: none;
+	margin: 0;
+	-moz-appearance: textfield;
+}
+
+/* Editor Form */
+.ce-block__content,
+.ce-toolbar__content {
+	max-width: calc(100% - 120px) !important;
+}
+.cdx-block {
+	max-width: 100% !important;
+}
+
+#home-cta-banner {
+	background-image: linear-gradient(to right bottom, #1122408e, #0a192f78),
+		url('../public/assets/home-cta-banner.jpg');
+}
+#we-do-banner {
+	background-image: linear-gradient(to right bottom, #1122408e, #0a192f78),
+		url('../public/assets/what-we-do-banner.jpg');
+	background-position: center;
+	background-size: cover;
+}
+#about-us-banner {
+	background-image: linear-gradient(to right bottom, #1122408e, #0a192f78),
+		url('../public/assets/about-us-banner.jpg');
+	background-position: center;
+	background-size: cover;
+}
+#connect-us-banner {
+	background-image: linear-gradient(to right bottom, #1122408e, #0a192f78),
+		url('../public/assets/connect-with-us-banner.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+@layer base {
+	/* ================= Toogle Bar ================= */
+	#header.sticky {
+		@apply fixed top-0 left-0 right-0 w-full z-[99];
+	}
+}
