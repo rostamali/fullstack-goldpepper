@@ -200,55 +200,6 @@ export default function Home() {
 						))}
 					</div>
 				</div>
-
-				{/* Contact Form */}
-				<div className="container">
-					<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px]">
-						<div>
-							<div className="contact-header">
-								<div className="space-y-4">
-									<span className="text-base-2 text-gray-muted">
-										Contact
-									</span>
-									<h2 className="heading-2 text-primary-white">
-										Contact with us
-									</h2>
-									<p className="text-base-2 text-gray-light">
-										Have questions or inquiries? We'd love
-										to hear from you! Our dedicated team is
-										here to provide assistance and support.
-										Feel free to reach out through the
-										contact form below, and we'll get back
-										to you as soon as possible.
-									</p>
-								</div>
-							</div>
-							<div className="space-y-6 mt-[40px]">
-								{HomeContactInfo.map((item, index) => (
-									<div
-										key={index}
-										className="flex items-center gap-2"
-									>
-										<div className="h-[45px] w-[45px] bg-primary-gold rounded-md flex-center text-gray-muted">
-											<item.icon size={25} />
-										</div>
-										<div className="space-y-1">
-											<p className="text-base-1 text-primary-white">
-												{item.title}
-											</p>
-											<p className="text-base-2 text-gray-light">
-												{item.linkText}
-											</p>
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-						<div className="contact-form">
-							<ContactForm />
-						</div>
-					</div>
-				</div>
 			</section>
 		</>
 	);

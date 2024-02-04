@@ -24,7 +24,7 @@ const ProjectDetails = async ({ params }: SearchParams) => {
 
 	return (
 		<main>
-			<section id="gallery" className="py-[80px] bg-black-dark">
+			<section id="gallery" className="py-[80px] bg-primary-gray">
 				<div className="container">
 					{result ? (
 						<div className="flex flex-col gap-[60px]">

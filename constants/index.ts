@@ -52,7 +52,7 @@ export const RootLinks = [
 		url: '/who-we-are',
 	},
 	{
-		label: 'Connect us',
+		label: 'Connect with us',
 		url: '/connect-with-us',
 	},
 	{

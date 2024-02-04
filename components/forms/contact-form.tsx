@@ -122,11 +122,8 @@ const ContactForm = () => {
 						</FormItem>
 					)}
 				/>
-				<div className="auth-input__group">
-					<Button
-						className="btn-primary-sm w-full"
-						disabled={isPending}
-					>
+				<div className="flex justify-end">
+					<Button className="btn-primary-lg" disabled={isPending}>
 						{isPending ? 'Submitting' : 'Submit'}
 					</Button>
 				</div>

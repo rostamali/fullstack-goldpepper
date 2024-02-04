@@ -3,6 +3,7 @@ import { GlobalFootprint } from '@/constants/content';
 import Image from 'next/image';
 import Link from 'next/link';
 import LocationCard from './location-card';
+import ContactForm from '@/components/forms/contact-form';
 export const metadata = {
 	title: 'Engage with Investment Excellence | Connect Today',
 	description: `Connect with us, your gateway to investment excellence. Reach out for inquiries, guidance, or simply to start your journey towards informed investment decisions.`,
@@ -90,7 +91,7 @@ const ConnectUs = () => {
 			</div>
 
 			{/* Short info */}
-			<div className="container">
+			<div className="container space-y-6">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">
 						Embrace the Future with Gold & Pepper
@@ -102,6 +103,7 @@ const ConnectUs = () => {
 						tailored solutions, and unparalleled expertise.
 					</p>
 				</div>
+				<ContactForm />
 			</div>
 		</section>
 	);
