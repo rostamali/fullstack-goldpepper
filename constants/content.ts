@@ -175,3 +175,41 @@ export const OurNetworks = [
 		`,
 	},
 ];
+export const ClientList = [
+	{
+		name: '',
+		icon: 'logo-1.png',
+	},
+	{
+		name: '',
+		icon: 'logo-2.png',
+	},
+	{
+		name: '',
+		icon: 'logo-3.png',
+	},
+	{
+		name: '',
+		icon: 'logo-4.png',
+	},
+	{
+		name: '',
+		icon: 'logo-5.png',
+	},
+	{
+		name: '',
+		icon: 'logo-6.png',
+	},
+	{
+		name: '',
+		icon: 'logo-7.png',
+	},
+	{
+		name: '',
+		icon: 'logo-8.png',
+	},
+	{
+		name: '',
+		icon: 'logo-9.png',
+	},
+];

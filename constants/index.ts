@@ -48,15 +48,11 @@ export const RootLinks = [
 		url: '/what-we-do',
 	},
 	{
-		label: 'About Us',
-		url: '/who-we-are',
-	},
-	{
-		label: 'Connect with us',
+		label: 'Contact Us',
 		url: '/connect-with-us',
 	},
 	{
-		label: 'Portals',
+		label: 'Projects',
 		url: '/project',
 	},
 ];

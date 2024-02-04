@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { AdvisoryServices, ManagementServices } from '@/constants/content';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import ServiceCard from './service-card';
 export const metadata = {
 	title: 'Comprehensive Investment Solutions | Your Path to Financial Success',
 	description: `Explore our comprehensive investment solutions designed to guide you on the path to financial success. From user-friendly tools to expert advice, we have you covered.`,

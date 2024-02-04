@@ -1,14 +1,9 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import ServiceCard from '../what-we-do/service-card';
-import {
-	CounterDetails,
-	FeatureList,
-	HomeContactInfo,
-} from '@/constants/content';
-import ContactForm from '@/components/forms/contact-form';
+import { CounterDetails, FeatureList } from '@/constants/content';
 import { ChevronRight } from 'lucide-react';
+import ClientLogos from './client-logos';
 export const metadata = {
 	title: 'Unlock Your Financial Potential | Leading Investment Porta',
 	description:
@@ -166,18 +161,7 @@ export default function Home() {
 						</div>
 
 						<div className="cta-banner-logos mt-[60px]">
-							<div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-[20px] items-center">
-								{[1, 2, 3, 4, 5].map((item, index) => (
-									<Image
-										src={`/assets/client-logo/1000${item}.png`}
-										alt={'Client logo'}
-										width={113}
-										height={80}
-										key={index}
-										className="object-contain w-auto h-[60px]"
-									/>
-								))}
-							</div>
+							<ClientLogos />
 						</div>
 					</div>
 				</div>
