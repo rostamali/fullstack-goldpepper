@@ -148,20 +148,20 @@ export const HomeContactInfo = [
 ];
 export const CounterDetails = [
 	{
-		counter: '50+',
+		counter: '9+',
 		label: 'Projects Completed',
 	},
 	{
-		counter: '15',
+		counter: '7',
 		label: 'Ongoing Projects',
 	},
 	{
-		counter: '1.2k',
+		counter: '$10.6 MLN',
 		label: 'Total Projects Value',
 	},
 	{
-		counter: '1.2k',
-		label: 'Market Presence',
+		counter: '10 Countries',
+		label: '⁠Market Presence',
 	},
 ];
 export const OurNetworks = [

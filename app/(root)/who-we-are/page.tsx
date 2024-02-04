@@ -55,13 +55,13 @@ const AboutUs = () => {
 						{TeamMembers.map((item, index) => (
 							<div
 								key={index}
-								className="relative bg-cover bg-no-repeat md:h-[400px] h-[300px] bg-top group"
+								className="relative bg-cover bg-no-repeat md:h-[400px] h-[300px] bg-top group rounded-md overflow-hidden"
 								style={{
 									backgroundImage: `url(/assets/team/${item.icon})`,
 								}}
 							>
 								<div className="flex flex-col items-center justify-end h-full p-4">
-									<div className="bg-gray-muted text-center p-2 w-full">
+									<div className="bg-gray-muted text-center p-2 w-full rounded-md">
 										<h4 className="heading-6 text-black-dark">
 											{item.name}
 										</h4>

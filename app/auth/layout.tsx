@@ -11,7 +11,7 @@ export default function AuthLayout({
 			<RootHeader />
 			<main className="bg-primary-gray">
 				<div className="container flex items-center justify-center py-[100px]">
-					<div className="w-[450px] bg-black-dark px-[25px] py-[40px] rounded-md">
+					<div className="w-[450px] bg-black-light px-[25px] py-[40px] rounded-md">
 						{children}
 					</div>
 				</div>
