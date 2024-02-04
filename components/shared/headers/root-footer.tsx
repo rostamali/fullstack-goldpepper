@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Logo from '../elements/logo';
 import { Facebook, Linkedin } from 'lucide-react';
+import { TermsLinks } from '@/constants';
 
 const RootFooter = () => {
 	return (
@@ -26,22 +27,16 @@ const RootFooter = () => {
 				</div>
 				<div className="footer__links pt-[30px] w-full flex flex-col sm:flex-row items-start sm:items-center justify-between">
 					<ul className="flex items-center gap-4">
-						<li>
-							<Link
-								href="/"
-								className="text-base-1 text-gray-muted uppercase"
-							>
-								PRIVACY POLICY
-							</Link>
-						</li>
-						<li>
-							<Link
-								href="/"
-								className="text-base-1 text-gray-muted uppercase"
-							>
-								TERMS OF USE
-							</Link>
-						</li>
+						{TermsLinks.map((item, index) => (
+							<li key={index}>
+								<Link
+									href={item.url}
+									className="text-base-1 text-gray-muted uppercase"
+								>
+									{item.label}
+								</Link>
+							</li>
+						))}
 					</ul>
 					<div className="text-base-1 text-gray-muted">
 						&copy; 2023 Gold & Pepper

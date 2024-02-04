@@ -10,15 +10,16 @@ const AboutUs = () => {
 			<div className="container">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">
-						A Synthesis of Expertise and Vision
+						Gold & Pepper: A Synthesis of Expertise and Vision
 					</h2>
 					<p className="text-base-1 text-gray-light mt-[10px]">
-						Positioned at the confluence of the Middle Eastern and
-						European business landscapes, Gold & Pepper represents a
-						paradigm of excellence in the realm of business
-						consultancy. Our institution is meticulously crafted
-						upon pillars of professional acumen, industry foresight,
-						and an unwavering commitment to stakeholder value.
+						Nestled at the strategic crossroads of the Middle
+						Eastern and European business landscapes, Gold & Pepper
+						Consulting stands as a beacon of excellence in the
+						business consultancy arena. Our foundation is built on
+						the pillars of professional acumen, industry foresight,
+						and a steadfast commitment to delivering value to our
+						stakeholders.
 					</p>
 				</div>
 				<div className="section__header mt-[40px]">
@@ -26,31 +27,23 @@ const AboutUs = () => {
 						Our Organizational Fabric
 					</h2>
 					<p className="text-base-1 text-gray-light mt-[10px]">
-						Gold & Pepper is not just a consultancy firm; it is an
-						embodiment of a philosophy that prioritizes strategic
+						More than a consultancy firm, Gold & Pepper is the
+						embodiment of a philosophy that champions strategic
 						alignment, market resilience, and sustainable growth.
-						Our ethos is deeply rooted in the principles of trust,
-						reliability, and actionable intelligence, ensuring that
-						our partners and clients always have a competitive edge
-						in the dynamic world of hospitality.
+						Our ethos is anchored in trust, reliability, and
+						actionable intelligence, ensuring our partners and
+						clients maintain a competitive edge in the fast-paced
+						world of business.
 					</p>
 				</div>
 			</div>
 
 			{/* Our team */}
-			<div className="container">
+			<div className="container space-y-10">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">Our Core Team</h2>
-					<p className="text-base-1 text-gray-light mt-[10px]">
-						Positioned at the confluence of the Middle Eastern and
-						European business landscapes, Gold & Pepper represents a
-						paradigm of excellence in the realm of business
-						consultancy. Our institution is meticulously crafted
-						upon pillars of professional acumen, industry foresight,
-						and an unwavering commitment to stakeholder value.
-					</p>
 				</div>
-				<div className="team__list mt-[40px]">
+				<div className="team__list">
 					<div className="team grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
 						{TeamMembers.map((item, index) => (
 							<div
@@ -82,16 +75,9 @@ const AboutUs = () => {
 			</div>
 
 			{/* Our networks */}
-			<div className="container">
+			<div className="container space-y-10">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">Our Network</h2>
-					<p className="text-base-1 text-gray-light mt-[10px]">
-						At Gold & Pepper, we believe that the future belongs to
-						those who not only envision it but have the expertise
-						and commitment to shape it. Join us in sculpting the
-						future of the hospitality industry, one strategic
-						milestone at a time.
-					</p>
 				</div>
 				<div className="services mt-[40px]">
 					<ul className="flex flex-col gap-[60px]">

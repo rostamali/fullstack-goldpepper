@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import Link from 'next/link';
 import { CounterDetails, FeatureList } from '@/constants/content';
 import { ChevronRight } from 'lucide-react';

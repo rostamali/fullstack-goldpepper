@@ -8,35 +8,28 @@ import {
 
 export const AdvisoryServices = [
 	{
-		icon: Box,
 		name: 'Market Entry',
-		description: `Leveraging our intricate knowledge of the UAE business ecosystem and fortified by strong local affiliations, we provide bespoke solutions ensuring seamless business establishment and expansion.`,
+		description: `Our deep knowledge of the UAE's business ecosystem, enhanced by strong local affiliations, enables us to offer customized solutions for seamless business establishment and expansion.`,
 	},
 	{
-		icon: Box,
 		name: 'Valuations',
-		description: `Through our vast network of professional affiliations, we present independent, objective valuations, underpinned by globally recognized methodologies, to cater to the diverse needs of investors and stakeholders.`,
+		description: `Utilizing our extensive professional network, we provide independent, objective valuations based on globally recognized methodologies, serving the varied needs of investors and stakeholders.`,
 	},
 	{
-		icon: Box,
 		name: 'Financial Due Diligence',
-		description: `Our analytical experts delve deep, identifying the strengths and potential vulnerabilities within businesses, safeguarding investments, and ensuring informed decision-making.`,
+		description: `Our analytical experts conduct thorough evaluations to identify strengths and potential vulnerabilities, safeguarding investments and facilitating informed decision-making.`,
 	},
 	{
-		icon: Box,
 		name: 'Corporate Finance',
-		description: `Gold & Pepper champions the establish-
-		ment and optimization of international finance structures, accentuated by incisive KPI monitoring and stringent budget controls.`,
+		description: `We excel in establishing and optimizing international finance structures, supported by precise KPI monitoring and rigorous budget controls.`,
 	},
 	{
-		icon: Box,
 		name: 'Fundraising & M&A',
-		description: `From conceptualizing investor pitches to meticulous data room preparation, we provide end-to-end support, ensuring our clients are equipped to navigate the multifaceted realms of fundraising and mergers & acquisitions.`,
+		description: `Offering comprehensive support from investor pitch conceptualization to data room preparation, we ensure our clients are well-prepared for fundraising and mergers & acquisitions.`,
 	},
 	{
-		icon: Box,
 		name: 'Management Reporting',
-		description: `With precision and clarity at its core, our management reporting services provide actionable insights, fostering informed decision-making at every organizational level.`,
+		description: `Our reporting services are designed for precision and clarity, delivering actionable insights that support informed decision-making at all organizational levels.`,
 	},
 ];
 export const TeamMembers = [
@@ -44,47 +37,42 @@ export const TeamMembers = [
 		icon: 'team-1.jpg',
 		name: 'Federico Castiello',
 		title: 'Founder',
-		description: `As the visionary architect behind Gold & Pepper, Federico Castiello brings to the table a rich tapestry of strategic acumen and entrepreneurial zeal. With nearly a decade of cross-industry expertise, Federico's leadership ensures that Gold & Pepper remains agile, innovative, and consistently aligned with global best practices.`,
+		description: `The visionary force behind Gold & Pepper, Federico Castiello, blends strategic acumen with entrepreneurial passion. Boasting a wealth of cross-industry expertise, Federico's leadership is pivotal in keeping Gold & Pepper agile, innovative, and in sync with global best practices.`,
 	},
 	{
 		icon: 'team-2.jpg',
 		name: 'Gianluca Corsi',
 		title: 'Principal',
-		description: `A seasoned strategist, Gianluca Corsi epitomizes the confluence of analytical prowess and market intuition. His extensive tenure in data analytics and account management positions him as a pivotal asset to Gold & Pepper's expansive portfolio of services.`,
+		description: `Gianluca Corsi stands as a testament to the power of analytical prowess fused with market intuition. His extensive experience in data analytics and account management makes him an invaluable asset to Gold & Pepper's broad array of services.`,
 	},
 	{
 		icon: 'team-3.jpg',
 		name: 'Antonio Muto',
 		title: 'Principal',
-		description: `As the Founding Principal of AD Consulenza, Antonio Muto brings with him an illustrious legacy of banking and financial leadership. His vast reservoir of experience, combined with academic credentials, fortifies Gold & Pepper's strategic vision and execution capabilities.`,
+		description: `Antonio Muto, the Founding Principal of AD Consulenza, brings a legacy of banking and financial excellence. His deep reservoir of experience, augmented by solid academic achievements, strengthens Gold & Pepper's strategic vision and operational capabilities.`,
 	},
 ];
 export const ManagementServices = [
 	{
-		icon: Box,
 		name: `Creative Solutions`,
-		description: `Our holistic approach to hospitality focuses on the creation of integrated experiences, ensuring brand resonance, guest satisfaction, and optimal profitability`,
+		description: `We adopt a holistic approach to hospitality, focusing on creating integrated experiences that enhance brand resonance, guest satisfaction, and profitability.`,
 	},
 	{
-		icon: Box,
 		name: `Design + Construction`,
-		description: `In collaboration with industry frontrunners, we provide a gamut of services, from planning and design to technical assistance, ensuring that every project aligns with global benchmarks.`,
+		description: `Working alongside industry leaders, we offer a full range of services from planning and design to technical assistance, ensuring alignment with global standards.`,
 	},
 	{
-		icon: Box,
 		name: `Asset Management`,
-		description: `Our asset management offerings span from financial structuring and ROI analytics to renovation planning, ensuring a holistic approach to asset optimization.`,
+		description: `Our comprehensive asset management services include financial structuring, ROI analysis, and renovation planning, aimed at maximizing asset value.`,
 	},
 	{
-		icon: Box,
 		name: `Planning + Development`,
-		description: `Comprehensive solutions, from site selection to financing, ensure that every venture is strategically aligned and operationally efficient.`,
+		description: `We provide end-to-end solutions for site selection and financing, ensuring strategic alignment and operational efficiency.`,
 	},
-	// {
-	// 	icon: '/images/management-service-thumbnail-5.jpg',
-	// 	name: `Pre-Opening + Operations`,
-	// 	description: `Our expertise extends to operational nuances, ensuring seamless pre-opening preparations and efficient ongoing operations.`,
-	// },
+	{
+		name: `Pre-Opening + Operations`,
+		description: `Our expertise covers the entire operational spectrum, guaranteeing smooth pre-opening activities and efficient ongoing management.`,
+	},
 ];
 export const GlobalFootprint = [
 	{
@@ -167,12 +155,7 @@ export const CounterDetails = [
 export const OurNetworks = [
 	{
 		name: `EUROPE - AD Advisory`,
-		description: `Renowned for its rigorous methodologies and client-centric approach, AD Advisory has been a stalwart in the European consultancy landscape since 2012. Their comprehensive service suite, combined with decades of collective expertise, positions them as a valuable ally in our quest for global excellence.`,
-	},
-	{
-		name: `MIDDLE EAST - IQ Hospitality`,
-		description: `Headquartered in Dubai, IQ Hospitality is a consultancy powerhouse specializing in F&B strategies. Their expansive service spectrum, coupled with collaborations with esteemed brands, amplifies our capacity to deliver unparalleled value to our clients.
-		`,
+		description: `With a reputation for rigorous methodologies and a client-centric approach, AD Advisory has been a cornerstone of the European consultancy landscape since 2012. Their extensive suite of services, backed by decades of collective expertise, makes them a crucial partner in our pursuit of global excellence.`,
 	},
 ];
 export const ClientList = [

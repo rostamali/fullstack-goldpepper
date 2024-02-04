@@ -31,11 +31,11 @@ export const SocialLinks = [
 export const TermsLinks = [
 	{
 		label: 'Privacy Policy',
-		url: '/',
+		url: '/privacy-policy',
 	},
 	{
-		label: 'Terms Of Use',
-		url: '/',
+		label: 'Terms And Conditions',
+		url: '/terms-and-conditions',
 	},
 ];
 export const RootLinks = [
@@ -46,6 +46,10 @@ export const RootLinks = [
 	{
 		label: 'What we do',
 		url: '/what-we-do',
+	},
+	{
+		label: 'About Us',
+		url: '/who-we-are',
 	},
 	{
 		label: 'Contact Us',

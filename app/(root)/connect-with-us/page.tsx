@@ -16,31 +16,33 @@ const ConnectUs = () => {
 			<div className="container">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">
-						Engage with Gold & Pepper A Gateway to Expertise
+						Engage with Gold & Pepper: A Gateway to Expertise
 					</h2>
 					<p className="text-base-1 text-gray-light mt-[10px]">
-						In the dynamic realm of hospitality consultancy,
-						effective communication and timely engagement are
-						paramount. At Gold & Pepper, we prioritize accessibility
-						and responsiveness, ensuring that our clients and
-						partners always have a direct channel to our expertise.
+						In the fast-paced world of business consultancy,
+						effective communication and timely engagement stand at
+						the forefront of success. At Gold & Pepper Consulting,
+						we place a high priority on accessibility and
+						responsiveness, ensuring that our clients and partners
+						have seamless access to our wealth of expertise.
 					</p>
 				</div>
 			</div>
 
 			{/* Global Footprint */}
-			<div className="container">
+			<div className="container space-y-10">
 				<div className="section__header">
 					<h2 className="heading-2 text-white">
 						Our Global Footprint
 					</h2>
 					<p className="text-base-1 text-gray-light mt-[10px]">
-						Gold & Pepper's expansive operational network spans
-						strategic locations, positioning us to serve diverse
-						market needs with agility and precision.
+						Gold & Pepper Consulting boasts an extensive operational
+						network across strategic locations, enabling us to meet
+						the diverse needs of our clients with agility and
+						precision.
 					</p>
 				</div>
-				<div className="area mt-[40px]">
+				<div className="area">
 					<ul className="flex flex-col gap-[60px]">
 						{GlobalFootprint.map((item, index) => (
 							<li
@@ -97,10 +99,13 @@ const ConnectUs = () => {
 						Embrace the Future with Gold & Pepper
 					</h2>
 					<p className="text-base-1 text-gray-light mt-[10px]">
-						Your journey towards industry leadership and sustainable
-						growth is but a conversation away. Engage with Gold &
-						Pepper today and unlock a world of strategic insights,
-						tailored solutions, and unparalleled expertise.
+						Your path to industry leadership and sustainable growth
+						begins with a single conversation. By engaging with Gold
+						& Pepper Consulting, you unlock a realm of strategic
+						insights, bespoke solutions, and unmatched expertise.
+						Let's embark on this journey together, shaping the
+						future of your business with precision, innovation, and
+						strategic foresight.
 					</p>
 				</div>
 				<ContactForm />
