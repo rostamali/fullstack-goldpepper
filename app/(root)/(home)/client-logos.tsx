@@ -6,10 +6,11 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import { Pagination } from 'swiper/modules';
 
 const ClientLogos = () => {
 	return (
-		<div className="">
+		<div className="client-logo">
 			<Swiper
 				spaceBetween={15}
 				breakpoints={{
@@ -25,6 +26,10 @@ const ClientLogos = () => {
 					},
 				}}
 				className="mySwiper"
+				pagination={{
+					clickable: true,
+				}}
+				modules={[Pagination]}
 			>
 				{ClientList.map((item, index) => (
 					<SwiperSlide key={index}>
