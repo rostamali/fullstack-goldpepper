@@ -164,3 +164,14 @@ export const CounterDetails = [
 		label: 'Market Presence',
 	},
 ];
+export const OurNetworks = [
+	{
+		name: `EUROPE - AD Advisory`,
+		description: `Renowned for its rigorous methodologies and client-centric approach, AD Advisory has been a stalwart in the European consultancy landscape since 2012. Their comprehensive service suite, combined with decades of collective expertise, positions them as a valuable ally in our quest for global excellence.`,
+	},
+	{
+		name: `MIDDLE EAST - IQ Hospitality`,
+		description: `Headquartered in Dubai, IQ Hospitality is a consultancy powerhouse specializing in F&B strategies. Their expansive service spectrum, coupled with collaborations with esteemed brands, amplifies our capacity to deliver unparalleled value to our clients.
+		`,
+	},
+];

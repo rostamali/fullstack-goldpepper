@@ -127,7 +127,7 @@ export default function Home() {
 				{/* CTA banner */}
 				<div className="container">
 					<div
-						className="p-10 rounded-md bg-cover"
+						className="md:p-10 p-4 rounded-md bg-cover"
 						id="home-cta-banner"
 					>
 						<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
@@ -186,7 +186,10 @@ export default function Home() {
 				<div className="container">
 					<div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-[25px]">
 						{CounterDetails.map((item, index) => (
-							<div className="space-y-3 text-center" key={index}>
+							<div
+								className="space-y-3 text-center max-sm:text-left"
+								key={index}
+							>
 								<h1 className="heading-1 text-gray-light">
 									{item.counter}
 								</h1>

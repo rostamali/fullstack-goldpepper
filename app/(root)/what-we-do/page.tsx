@@ -11,126 +11,66 @@ export const metadata = {
 const WhatWeDoPage = () => {
 	return (
 		<>
-			<section id="we-do-banner">
-				<div className="container">
-					<div className="flex items-center sm:h-[450px] h-[350px]">
-						<h2 className="heading-2 text-primary-white">
-							What we do
-						</h2>
-					</div>
-				</div>
-			</section>
-			<section
-				id="about-us"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
-				<div className="container">
-					<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
-						<div className="flex flex-col gap-[20px]">
-							<span className="text-base-2 text-gray-muted">
-								Vision
-							</span>
-							<h2 className="heading-2 text-primary-white">
-								Gold & Pepper: A Synthesis of Expertise and
-								Vision
-							</h2>
-						</div>
-						<div className="flex flex-col gap-[20px] items-start">
-							<p className="text-base-2 text-gray-light">
-								Positioned at the confluence of the Middle
-								Eastern and European business landscapes, Gold &
-								Pepper represents a paradigm of excellence in
-								the realm of business consultancy. Our
-								institution is meticulously crafted upon pillars
-								of professional acumen, industry foresight, and
-								an unwavering commitment to stakeholder value.
-							</p>
-							<div className="flex items-center gap-[15px]">
-								<Link href="/who-we-are">
-									<Button className="btn-primary-sm">
-										Learn more
-									</Button>
-								</Link>
-								<Link href="/auth/signup">
-									<Button className="btn-ghost-sm text-gray-muted">
-										Sign up
-										<ChevronRight />
-									</Button>
-								</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section
-				id="service"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
+			<section className="pt-[150px] pb-[50px] space-y-24 bg-primary-gray">
+				{/* Short Info */}
 				<div className="container">
 					<div className="section__header">
-						<div className="section__header">
-							<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
-								<h2 className="heading-2 text-primary-white">
-									Gold & Pepper: A Synthesis of Expertise and
-									Vision
-								</h2>
-								<p className="text-base-2 text-gray-light">
-									Positioned at the confluence of the Middle
-									Eastern and European business landscapes,
-									Gold & Pepper represents a paradigm of
-									excellence in the realm of business
-									consultancy. Our institution is meticulously
-									crafted upon pillars of professional acumen,
-									industry foresight, and an unwavering
-									commitment to stakeholder value.
-								</p>
-							</div>
-						</div>
+						<h2 className="heading-2 text-white">
+							Pioneering Strategic Solutions for Tomorrow's
+							Challenges
+						</h2>
+						<p className="text-base-1 text-gray-light mt-[10px]">
+							At the heart of our offerings lies a comprehensive
+							suite of technical and financial consultancy
+							services, tailored explicitly for small and
+							medium-sized enterprises (SMEs). Our strategies are
+							rooted in a deep understanding of market dynamics,
+							enabling us to support enterprises through their
+							engagements with financial intermediaries,
+							suppliers, and contractors. Our primary objective:
+							risk mitigation and the assurance of business
+							continuity in an unpredictable environment.
+						</p>
 					</div>
-					<div className="services__list">
-						<div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-[40px] gap-[25px] mt-[50px]">
-							{AdvisoryServices.map((service, index) => (
-								<ServiceCard
+					<div className="services mt-[40px]">
+						<ul className="flex flex-col gap-[60px]">
+							{AdvisoryServices.map((item, index) => (
+								<li
 									key={index}
-									data={service}
-									link={false}
-								/>
+									className="grid md:grid-cols-4 grid-cols-1 gap-[20px]"
+								>
+									<h4 className="heading-4 uppercase text-white">
+										{item.name}
+									</h4>
+									<p className="md:col-span-3 text-base-1 text-gray-light">
+										{item.description}
+									</p>
+								</li>
 							))}
-						</div>
+						</ul>
 					</div>
 				</div>
-			</section>
-			<section
-				id="management"
-				className="md:py-[80px] py-[60px] bg-primary-gray"
-			>
+
+				{/* CTA Banner */}
 				<div className="container">
-					<div className="grid md:grid-cols-2 grid-cols-1 md:gap-[60px] gap-[30px] items-center">
-						<div className="flex flex-col gap-[20px]">
-							<span className="text-base-2 text-gray-muted">
-								Invest
-							</span>
-							<h2 className="heading-4 text-primary-white">
-								Unlock Your Financial Potential with Our
-								Investment Platform
-							</h2>
-						</div>
-					</div>
-					<div className="grid lg:grid-cols-3 grid-cols-1 md:gap-[40px] gap-[60px] mt-[40px]">
-						<div className="flex flex-col gap-[20px]">
+					<div
+						className="md:p-10 p-4 rounded-md bg-cover"
+						id="home-cta-banner"
+					>
+						<div className="space-y-5">
 							<h2 className="heading-2 text-primary-white">
-								Management Services
+								Financial Consulting
 							</h2>
-							<p className="text-base-2 text-gray-light">
-								Gold & Pepper's investment arm specializes in
-								identifying, funding, and stewarding unique
-								hospitality and real estate investment
-								opportunities across diverse markets. With an
-								unblemished track record, we have solidified our
-								position as the preferred partner for private
-								equity firms, individual investors, and
-								institutional funds.
-							</p>
+							<div className="xl:w-[50%] lg:w-[70%] w-[100%]">
+								<p className="text-base-2 text-gray-light">
+									In the realm of financial challenges and
+									strategic pivots, Gold & Pepper stands as a
+									trusted ally. Our seasoned consultants, with
+									decades of combined experience, ensure that
+									every financial obstacle is transformed into
+									an opportunity for growth and innovation.
+								</p>
+							</div>
 							<div className="flex items-center gap-[15px]">
 								<Link href="/who-we-are">
 									<Button className="btn-primary-sm">
@@ -145,17 +85,41 @@ const WhatWeDoPage = () => {
 								</Link>
 							</div>
 						</div>
-						<div className="lg:col-span-2">
-							<div className="grid sm:grid-cols-2 grid-cols-1 md:gap-[40px] gap-[30px]">
-								{ManagementServices.map((service, index) => (
-									<ServiceCard
-										key={index}
-										data={service}
-										link={false}
-									/>
-								))}
-							</div>
-						</div>
+					</div>
+				</div>
+
+				{/* Management Service */}
+				<div className="container">
+					<div className="section__header">
+						<h2 className="heading-2 text-white">
+							Investments Management Services
+						</h2>
+						<p className="text-base-1 text-gray-light mt-[10px]">
+							Gold & Pepper's investment arm specializes in
+							identifying, funding, and stewarding unique
+							hospitality and real estate investment opportunities
+							across diverse markets. With an unblemished track
+							record, we have solidified our position as the
+							preferred partner for private equity firms,
+							individual investors, and institutional funds.
+						</p>
+					</div>
+					<div className="services mt-[40px]">
+						<ul className="flex flex-col gap-[60px]">
+							{ManagementServices.map((item, index) => (
+								<li
+									key={index}
+									className="grid md:grid-cols-4 grid-cols-1 gap-[20px]"
+								>
+									<h4 className="heading-4 uppercase text-white">
+										{item.name}
+									</h4>
+									<p className="md:col-span-3 text-base-1 text-gray-light">
+										{item.description}
+									</p>
+								</li>
+							))}
+						</ul>
 					</div>
 				</div>
 			</section>
