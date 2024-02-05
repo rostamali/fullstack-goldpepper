@@ -89,7 +89,7 @@ export const GlobalFootprint = [
 	},
 	{
 		title: 'Events Management ',
-		location: 'United Arab Emirates',
+		location: 'Dubai - United Arab Emirates',
 		telephone: '+971 52 542 4638',
 		email: 'Corina.tene@goldandpepper.com',
 	},
