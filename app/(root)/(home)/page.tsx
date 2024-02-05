@@ -13,7 +13,7 @@ export default function Home() {
 	return (
 		<>
 			<section
-				className="md:h-[800px] h-[600px] bg-cover bg-no-repeat"
+				className="md:h-[800px] h-[600px] bg-cover bg-no-repeat max-sm:bg-center"
 				style={{
 					backgroundImage: `url(/assets/home-hero-banner.png)`,
 				}}
